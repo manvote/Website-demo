@@ -1,0 +1,85 @@
+/* Splash Screen Container */
+.splash-container {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Logo with color animation */
+.splash-logo {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  animation: colorPulse 1.5s infinite ease-in-out;
+  z-index: 10;
+}
+
+/* Color Pulse */
+@keyframes colorPulse {
+  0% {
+    filter: brightness(0) saturate(100%) invert(11%)
+      sepia(48%) saturate(1500%) hue-rotate(190deg);
+  }
+  50% {
+    filter: brightness(0) saturate(100%) invert(57%)
+      sepia(40%) saturate(900%) hue-rotate(180deg);
+  }
+  100% {
+    filter: brightness(0) saturate(100%) invert(11%)
+      sepia(48%) saturate(1500%) hue-rotate(190deg);
+  }
+}
+
+/* Solid Ripple */
+.solid-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #001f3f;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 5;
+  animation: solidRippleExpand 0.9s forwards ease-out;
+}
+
+@keyframes solidRippleExpand {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 2500px;
+    height: 2500px;
+    opacity: 1;
+  }
+}
+
+/* Homepage Reveal */
+.reveal-content {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 20;
+}
+
+.reveal-content.show {
+  animation: revealFade 0.9s forwards ease-out;
+}
+
+/* Fade only */
+@keyframes revealFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

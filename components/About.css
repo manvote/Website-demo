@@ -1,0 +1,288 @@
+.about-wrapper {
+  padding-top: 70px;
+  color: #0a2540;
+
+  /* ENTERPRISE TECH PATTERN */
+  background-color: #f8fbff;
+  background-image:
+    linear-gradient(
+      rgba(0,74,173,0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0,74,173,0.05) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle,
+      rgba(0,74,173,0.08) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    80px 80px,
+    80px 80px,
+    40px 40px;
+
+  background-position:
+    center,
+    center,
+    20px 20px;
+}
+
+/* HERO */
+.about-hero {
+  padding: 140px 10% 100px;
+}
+
+.about-hero-inner h1 {
+  font-size: 56px;
+  font-weight: 800;
+  max-width: 900px;
+}
+
+.about-hero-inner p {
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 720px;
+  color: #425466;
+}
+
+/* SECTIONS */
+.about-section {
+  padding: 90px 10%;
+}
+
+.about-section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+/* STATS */
+.about-stats {
+  padding: 80px 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.stat-card {
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0,74,173,0.15);
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 52px;
+  color: #004aad;
+}
+
+.stat-card p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* TEAM SECTION */
+.about-team {
+  padding: 120px 8%;
+  background: transparent;
+}
+
+.about-team h2 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 70px;
+  font-weight: 800;
+  color: #001f3f;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 50px 36px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 74, 173, 0.18);
+}
+
+/* PHOTO */
+.team-photo {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #e6efff;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.team-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #001f3f;
+}
+
+.team-card span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #004aad;
+  margin-bottom: 14px;
+}
+
+.team-card p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #425466;
+}
+/* ===============================
+   MOBILE RESPONSIVE – ABOUT PAGE
+   =============================== */
+
+@media (max-width: 1024px) {
+  .about-hero {
+    padding: 120px 6% 80px;
+  }
+
+  .about-section,
+  .about-stats {
+    padding: 70px 6%;
+  }
+
+  .about-team {
+    padding: 90px 6%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .about-hero {
+    padding: 110px 6% 70px;
+  }
+
+  .about-hero-inner h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .about-hero-inner p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* SECTIONS */
+  .about-section h2 {
+    font-size: 30px;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* STATS */
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 30px 20px;
+  }
+
+  .stat-card h3 {
+    font-size: 38px;
+  }
+
+  /* TEAM */
+  .about-team h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  .team-grid {
+    gap: 40px;
+  }
+
+  .team-card {
+    padding: 40px 26px;
+  }
+
+  .team-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* HERO */
+  .about-hero-inner h1 {
+    font-size: 32px;
+  }
+
+  .about-hero-inner p {
+    font-size: 15.5px;
+  }
+
+  /* SECTIONS */
+  .about-section {
+    padding: 60px 6%;
+  }
+
+  .about-section h2 {
+    font-size: 26px;
+  }
+
+  /* STATS */
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* TEAM */
+  .about-team {
+    padding: 70px 6%;
+  }
+
+  .team-card {
+    padding: 34px 22px;
+  }
+
+  .team-card h4 {
+    font-size: 18px;
+  }
+
+  .team-card p {
+    font-size: 14.5px;
+  }
+}

@@ -1,0 +1,35 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff; /* White background */
+  color: #0a0a0a;            /* Dark text */
+  overflow-x: hidden;
+}
+
+/* THEME COLORS */
+:root {
+  --primary-blue: #0A66C2;      /* Main blue (logo color) */
+  --light-blue: #1E90FF;        /* Accent blue */
+  --dark-blue: #063970;         /* For headings */
+  --white: #ffffff;
+  --light-grey: #f5f8fd;
+}
+
+/* COMMON SECTION STYLING */
+.section {
+  width: 100%;
+  padding: 70px 8%;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+}

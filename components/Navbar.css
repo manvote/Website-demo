@@ -1,0 +1,494 @@
+/* BASIC NAVBAR LAYOUT */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;   /* DEFAULT */
+}
+
+/* When scrolled */
+.navbar.scrolled {
+  background: #001f3f;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+/* HOME PAGE NAVBAR */
+.navbar-home {
+  background: transparent;
+}
+
+/* HOME PAGE AFTER SCROLL */
+.navbar-home.scrolled {
+  background: #001f3f;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* OTHER PAGES */
+.navbar-solid {
+  background: #001f3f;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 50px;
+  }
+}
+
+
+/* MENU */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.nav-links li a,
+.nav-links li span {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav-links li a:hover,
+.nav-links li span:hover {
+  opacity: 0.7;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  background: white;
+  padding: 10px 0;
+  border-radius: 8px;
+  width: 180px;
+  display: none;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdown-menu li a {
+  color: #001f3f;
+  font-size: 15px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* BUTTON */
+.contact-btn {
+  background: #0056d6;
+  color:#fcfcfc !important;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.contact-btn:hover {
+  background: #245be7;
+}
+
+/* MOBILE */
+.menu-icon {
+  font-size: 30px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 230px;
+    background: #001f3f;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: #002b5c;
+    box-shadow: none;
+  }
+
+  .dropdown-menu li a {
+    color: white;
+  }
+}
+
+/* Logo container */
+.logo-flex {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Logo image size */
+.logo-img {
+  height: 150px;       /* increase or decrease if needed */
+  width: auto;
+  margin-right: 12px;  /* spacing between logo and text */
+}
+
+/* Logo text style (like Kumaran) */
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #004aad;     /* same blue theme */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 40px;
+  }
+  .logo-text {
+    font-size: 18px;
+  }
+}
+/* ------------------- SOLUTIONS SECTION ------------------- */
+
+.solutions-pro {
+  padding: 120px;
+  background: #02204a;
+  color: #fff;
+}
+
+.sol-tag {
+  color: #00c8ff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.sol-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 60px;
+}
+
+/* LIST WRAPPER */
+.solutions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* CARD */
+.solution-card {
+  display: grid;
+  grid-template-columns: 120px 1fr 80px;
+  align-items: center;
+  padding: 40px 50px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.solution-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ICON */
+.solution-icon {
+  width: 90px;
+  height: 90px;
+  font-size: 45px;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.4s ease;
+}
+
+/* TEXT */
+.solution-content h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.solution-content p {
+  color: #d4e1ff;
+  font-size: 18px;
+}
+
+/* ARROW */
+.solution-arrow span {
+  font-size: 26px;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+/* ----------------- HOVER: BLUE → WHITE TRANSITION ----------------- */
+.solution-card:hover {
+  background: #fff;
+  transform: translateY(-6px);
+  border-color: #007bff;
+}
+
+.solution-card:hover .solution-content h2,
+.solution-card:hover .solution-content p {
+  color: #000;
+}
+
+.solution-card:hover .solution-icon {
+  background: #007bff;
+  color: #fff;
+}
+
+.solution-card:hover .solution-arrow span {
+  background: #007bff;
+  color: #fff;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .solution-card {
+    grid-template-columns: 90px 1fr 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .solution-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+.dropdown {
+  position: relative;
+}
+
+/* Title */
+.dropdown-title {
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;           /* ATTACH menu directly below title */
+  left: 0;
+
+  background: #ffffff;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+
+  padding: 10px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.25s ease;
+  z-index: 9999;
+}
+
+/* KEEP DROPDOWN OPEN */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Items */
+.dropdown-menu li {
+  padding: 12px 18px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #001f3f;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #f1f7ff;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  padding: 10px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 12px 18px;
+}
+
+.dropdown-menu li a {
+  color: #222;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.dropdown-menu li:hover {
+  background: #f2f6ff;
+}
+
+/* ===== ADVANCED DROPDOWN ANIMATION ===== */
+
+.products-dropdown {
+  animation: dropdownFade 0.35s ease forwards;
+  transform-origin: top center;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/* Smooth content switch on right panel */
+.dropdown-right {
+  animation: contentFade 0.25s ease;
+}
+
+@keyframes contentFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.products-dropdown::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #004aad,
+    #3c70ff,
+    #00c8ff
+  );
+}
+/* === FORCE REMOVE ALL LIST DOTS IN NAVBAR === */
+.navbar ul,
+.navbar li {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove modern marker bullets */
+.navbar li::marker {
+  content: "";
+}
+
+/* Extra safety for dropdowns */
+.dropdown-menu,
+.dropdown-menu li,
+.products-dropdown,
+.products-dropdown a {
+  list-style: none !important;
+}
+
+/* ================= NAVBAR OVERRIDES (DO NOT TOUCH ABOVE) ================= */
+
+/* HOME PAGE – transparent at top */
+.navbar.navbar-home {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* HOME PAGE – after scroll */
+.navbar.navbar-home.scrolled {
+  background: #001f3f !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* OTHER PAGES – always solid */
+.navbar.navbar-solid {
+  background: #001f3f !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+

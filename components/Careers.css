@@ -1,0 +1,134 @@
+/* SECTION BACKGROUND */
+.careers-section {
+  padding: 120px 80px;
+  background:
+    radial-gradient(circle at top left, rgba(0,94,255,0.12), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(0,200,255,0.15), transparent 45%),
+    linear-gradient(#ffffff, #ffffff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle grid */
+.careers-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* HEADER */
+.careers-header {
+  max-width: 800px;
+  margin-bottom: 80px;
+}
+
+.careers-header h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #0a2540;
+}
+
+.careers-header p {
+  font-size: 20px;
+  color: #425466;
+  margin-top: 10px;
+}
+
+/* LIST */
+.careers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+/* CARD */
+.career-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* IMAGE */
+.career-image img {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* CONTENT */
+.career-content h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #0a2540;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #005eff, #00c8ff);
+  margin: 14px 0 20px;
+  border-radius: 4px;
+}
+
+.career-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #425466;
+  max-width: 520px;
+}
+
+/* BUTTON */
+.career-btn {
+  margin-top: 30px;
+  padding: 14px 34px;
+  background: #4a6eff;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.career-btn:hover {
+  background: #ff4b2b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255,107,74,0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .career-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .career-content p {
+    margin: 0 auto;
+  }
+
+  .underline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .careers-section {
+    padding: 80px 25px;
+  }
+
+  .careers-header h1 {
+    font-size: 38px;
+  }
+
+  .career-content h2 {
+    font-size: 30px;
+  }
+}

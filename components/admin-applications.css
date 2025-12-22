@@ -1,0 +1,64 @@
+/* ===== ADMIN APPLICATIONS ===== */
+
+.admin-applications {
+  font-family: "Inter", sans-serif;
+}
+
+.admin-applications h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 22px;
+}
+
+.applications-table-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(10, 37, 64, 0.1);
+  overflow-x: auto;
+}
+
+.applications-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.applications-table thead {
+  background: #f0f5ff;
+}
+
+.applications-table th {
+  text-align: left;
+  padding: 16px;
+  font-weight: 600;
+  color: #0a2540;
+  border-bottom: 1px solid #e2e8f5;
+}
+
+.applications-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eef2fb;
+  color: #3b4a66;
+  vertical-align: top;
+}
+
+.applications-table tr:hover {
+  background: #f9fbff;
+}
+
+.cover-note {
+  max-width: 280px;
+  line-height: 1.5;
+  color: #5f6c8a;
+}
+
+.resume-link {
+  color: #006cff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  text-decoration: underline;
+}

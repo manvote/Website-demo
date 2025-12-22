@@ -1,0 +1,282 @@
+/* src/components/products/ProductPage.css */
+
+.product-page {
+  padding: 140px 8% 120px;
+  color: #0a2540;
+  position: relative;
+}
+
+/* ===== PASTEL ENTERPRISE BACKGROUND ===== */
+.pastel-bg {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(186, 224, 255, 0.45), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255, 210, 220, 0.45), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(210, 240, 255, 0.4), transparent 50%),
+    linear-gradient(180deg, #f9fbff 0%, #ffffff 100%);
+}
+
+/* subtle SaaS dot pattern */
+.pastel-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(10, 37, 64, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+/* ===== HERO ===== */
+.product-hero {
+  max-width: 980px;
+  position: relative;
+}
+
+.product-hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.subtitle {
+  font-size: 20px;
+  max-width: 760px;
+  margin-top: 20px;
+  color: #425466;
+}
+
+/* ===== SECTIONS ===== */
+.product-section {
+  margin-top: 80px;
+  max-width: 900px;
+}
+
+.product-section h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.product-section p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #425466;
+}
+
+/* ===== GRID ===== */
+.product-grid {
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+}
+
+.product-grid h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.product-grid ul {
+  padding-left: 18px;
+}
+
+.product-grid li {
+  margin-bottom: 14px;
+  line-height: 1.7;
+  color: #425466;
+}
+
+/* ===== CAPS ===== */
+.capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.capabilities span {
+  padding: 10px 18px;
+  background: rgba(0, 74, 173, 0.08);
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===== STATS ===== */
+.product-stats {
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.stat-box strong {
+  font-size: 38px;
+  display: block;
+  color: #004aad;
+}
+
+.stat-box span {
+  color: #425466;
+}
+
+/* ===== CTA ===== */
+.product-cta {
+  margin-top: 120px;
+  max-width: 720px;
+}
+
+.product-cta h2 {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.product-cta p {
+  font-size: 18px;
+  color: #425466;
+  margin-bottom: 28px;
+}
+
+.product-cta button {
+  padding: 16px 40px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #004aad, #3c7dff);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.cta-primary {
+  background: linear-gradient(135deg, #1f5eff, #004aad);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 32px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(0, 74, 173, 0.25);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE – PRODUCT PAGE
+   =============================== */
+
+@media (max-width: 768px) {
+
+  /* PAGE WRAPPER */
+  .product-page {
+    padding: 110px 6% 80px;
+  }
+
+  /* HERO */
+  .product-hero h1 {
+    font-size: 34px;
+    line-height: 1.25;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 16px;
+  }
+
+  /* SECTIONS */
+  .product-section {
+    margin-top: 56px;
+  }
+
+  .product-section h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .product-section p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  /* GRID → STACK */
+  .product-grid {
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .product-grid h3 {
+    font-size: 20px;
+  }
+
+  .product-grid ul {
+    padding-left: 16px;
+  }
+
+  .product-grid li {
+    font-size: 15px;
+  }
+
+  /* CAPABILITIES TAGS */
+  .capabilities {
+    gap: 10px;
+  }
+
+  .capabilities span {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  /* STATS → 2 x 2 GRID */
+  .product-stats {
+    margin-top: 70px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+
+  .stat-box strong {
+    font-size: 30px;
+  }
+
+  .stat-box span {
+    font-size: 14px;
+  }
+
+  /* CTA */
+  .product-cta {
+    margin-top: 80px;
+  }
+
+  .product-cta h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .product-cta p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .product-cta button,
+  .cta-primary {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 420px) {
+  .product-hero h1 {
+    font-size: 30px;
+  }
+
+  .product-section h2 {
+    font-size: 24px;
+  }
+}

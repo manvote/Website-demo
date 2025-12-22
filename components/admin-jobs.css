@@ -1,0 +1,115 @@
+/* ===== ADMIN JOBS ===== */
+
+.admin-jobs-wrapper {
+  font-family: "Inter", sans-serif;
+}
+
+.admin-jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.admin-jobs-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a2540;
+}
+
+/* Buttons */
+.admin-primary-btn {
+  padding: 12px 18px;
+  background: linear-gradient(90deg, #006cff, #0056d6);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 26px;
+}
+
+.admin-job-card {
+  background: #ffffff;
+  padding: 26px 24px;
+  border-radius: 16px;
+  box-shadow: 0 14px 35px rgba(10, 37, 64, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.admin-job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(10, 37, 64, 0.16);
+}
+
+.admin-job-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a2540;
+}
+
+.job-meta {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #5f6c8a;
+}
+
+.job-location {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #5f6c8a;
+}
+
+/* Actions */
+.job-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn-outline {
+  padding: 10px 14px;
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid #006cff;
+  color: #006cff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: #eaf2ff;
+}
+
+.btn-danger {
+  padding: 10px 14px;
+  background: #ffecec;
+  border-radius: 8px;
+  border: none;
+  color: #d32f2f;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background: #ffd6d6;
+}
+
+.btn-primary {
+  padding: 10px 14px;
+  background: #006cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #0056d6;
+}

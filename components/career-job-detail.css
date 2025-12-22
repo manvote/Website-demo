@@ -1,0 +1,137 @@
+/* ===============================
+   CAREER JOB DETAIL PAGE
+================================ */
+
+.career-job-detail {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+}
+
+/* -------------------------------
+   JOB INFO (LEFT)
+-------------------------------- */
+
+.job-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0a2540;
+  margin-bottom: 10px;
+}
+
+.job-meta {
+  font-size: 15px;
+  color: #5f6c8a;
+  margin-bottom: 30px;
+}
+
+.job-info h3 {
+  font-size: 20px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  color: #1f2a44;
+}
+
+.job-info p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #3b4a66;
+}
+
+/* -------------------------------
+   APPLICATION FORM (RIGHT)
+-------------------------------- */
+
+.job-apply-form {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 100px;
+}
+
+.job-apply-form h2 {
+  font-size: 22px;
+  margin-bottom: 22px;
+  color: #0a2540;
+}
+
+.job-apply-form input,
+.job-apply-form textarea {
+  width: 100%;
+  padding: 14px 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #dfe6f3;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-apply-form input:focus,
+.job-apply-form textarea:focus {
+  border-color: #006cff;
+  box-shadow: 0 0 0 3px rgba(0, 108, 255, 0.12);
+}
+
+.job-apply-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* FILE INPUT */
+.job-apply-form input[type="file"] {
+  padding: 10px;
+  background: #f5f8ff;
+  border: 1px dashed #c7d6f7;
+}
+
+/* SUBMIT BUTTON */
+.job-apply-form button {
+  width: 100%;
+  padding: 14px;
+  background: #006cff;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.job-apply-form button:hover {
+  background: #0056d6;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 25px rgba(0, 108, 255, 0.35);
+}
+
+/* -------------------------------
+   LOADING STATE
+-------------------------------- */
+
+.careers-loading {
+  padding: 100px 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #5f6c8a;
+}
+
+/* -------------------------------
+   RESPONSIVE
+-------------------------------- */
+
+@media (max-width: 900px) {
+  .career-job-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .job-apply-form {
+    position: static;
+  }
+}

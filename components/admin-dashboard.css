@@ -1,0 +1,71 @@
+/* ===== ADMIN LAYOUT ===== */
+
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f8ff;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 250px;
+  background: #ffffff;
+  padding: 32px 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 18px rgba(10, 37, 64, 0.06);
+}
+
+.admin-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #006cff;
+  margin-bottom: 40px;
+}
+
+/* Navigation */
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.admin-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: #0a2540;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.admin-link:hover {
+  background: #eaf2ff;
+  color: #006cff;
+}
+
+/* Logout */
+.admin-logout {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #006cff, #0056d6);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.admin-logout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 108, 255, 0.25);
+}
+
+/* Content */
+.admin-content {
+  flex: 1;
+  padding: 42px;
+}

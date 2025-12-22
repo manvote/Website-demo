@@ -1,0 +1,38 @@
+/* ===== DASHBOARD SUMMARY ===== */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.dashboard-card {
+  background: #ffffff;
+  padding: 28px 26px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(10, 37, 64, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.12);
+}
+
+.dashboard-card span {
+  font-size: 14px;
+  color: #5f6c8a;
+  font-weight: 500;
+}
+
+.dashboard-card h3 {
+  margin-top: 10px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #0a2540;
+}
+
+.admin-loading {
+  font-size: 16px;
+  color: #5f6c8a;
+}

@@ -1,0 +1,65 @@
+/* FULL DARK BACKGROUND */
+.splash-screen-dark {
+  width: 100%;
+  height: 100vh;
+  background: #0a0f1a; /* deep blue-black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BLUE AURA GLOW BEHIND LOGO */
+.blue-aura {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0,122,255,0.8), rgba(0,122,255,0.2), transparent);
+  filter: blur(55px);
+  animation: auraPulse 2.4s ease-out forwards;
+}
+
+@keyframes auraPulse {
+  0% { transform: scale(0.4); opacity: 0.2; }
+  100% { transform: scale(1.2); opacity: 1; }
+}
+
+/* LOGO ZOOM-IN REVEAL */
+.logo-wrapper-dark {
+  position: relative;
+  z-index: 5;
+  animation: logoPop 1.5s ease forwards;
+}
+
+@keyframes logoPop {
+  0% { opacity: 0; transform: scale(0.65); }
+  60% { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.logo-dark {
+  width: 180px;
+  filter: drop-shadow(0 6px 18px rgba(0, 120, 255, 0.6));
+}
+
+/* NEON SHINE SLIDING ACROSS LOGO */
+.shine-dark {
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(120deg,
+    transparent,
+    rgba(255,255,255,0.9),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shineMove 1.4s ease 1.2s forwards;
+}
+
+@keyframes shineMove {
+  0% { left: -200%; }
+  100% { left: 200%; }
+}

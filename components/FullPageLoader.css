@@ -1,0 +1,68 @@
+.loader-page {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #f6f8fc, #eef3ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-card {
+  background: #fff;
+  padding: 48px 56px;
+  border-radius: 22px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  width: 320px;
+}
+
+.loader-logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0047ff, #002d9c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-logo span {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
+.loader-bar {
+  height: 4px;
+  width: 100%;
+  background: #e6ebff;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.loader-bar span {
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, #0047ff, #002d9c);
+  animation: slide 1.3s infinite ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+.loader-text {
+  font-size: 14px;
+  color: #444;
+  letter-spacing: 0.3px;
+}

@@ -1,0 +1,221 @@
+.products-section {
+  background: #022f6a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.products-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 80px;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.products-left {
+  width: 40%;
+  animation: fadeUp 0.5s ease;
+}
+
+.products-left h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.products-left .desc {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.meta {
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.product-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #021b3a;
+  padding: 14px 26px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.product-cta:hover {
+  transform: translateX(4px);
+}
+
+.products-right {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.products-right img {
+  width: 100%;
+  max-width: 620px;
+  border-radius: 22px;
+  animation: fadeImage 0.6s ease;
+}
+
+/* DOT NAVIGATION */
+.product-dots {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #3c70ff;
+  border-color: #2042ed;
+  box-shadow: 0 0 12px rgba(31, 61, 255, 0.7);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeImage {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.products-left {
+  width: 40%;
+  animation: fadeUp 0.5s ease;
+
+  /* ADD THIS */
+  padding-bottom: 20px;
+}
+/* ===============================
+   PRODUCTS SECTION – MOBILE
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .products-section {
+    padding: 40px 16px;
+  }
+
+  .products-container {
+    flex-direction: column-reverse; /* IMAGE first */
+    padding: 0;
+    gap: 28px;
+  }
+
+  .products-left,
+  .products-right {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Title */
+  .products-left h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  /* Description */
+  .products-left .desc {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  /* Meta */
+  .meta {
+    gap: 20px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  /* CTA */
+  .product-cta {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  /* Image */
+  .products-right img {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  /* DOTS → move bottom & horizontal */
+  .product-dots {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .products-left h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .products-right img {
+    border-radius: 14px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  }
+}
+@media (max-width: 768px) {
+  .product-cta {
+    margin-top: 18px;
+  }
+}

@@ -1,0 +1,1520 @@
+/* ===============================
+   IMPACT – MNC PREMIUM STYLE
+   =============================== */
+
+.impact-mnc {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  padding: 90px 120px;
+  background: #ffffff;
+  align-items: center;   /* KEY FIX */
+}
+
+
+/* LEFT */
+.impact-left {
+  max-width: 560px;
+}
+
+.impact-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* balances left vertically */
+}
+
+
+.impact-tag {
+  color: #006cff;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.impact-title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  color: #0b0b0b;
+}
+
+.impact-title span {
+  display: block;
+  color: #006cff;
+}
+
+.impact-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 26px;
+}
+
+/* ===============================
+   IMPACT VALUE POINTS
+   =============================== */
+
+.impact-points {
+  margin: 26px 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.impact-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.impact-point span {
+  color: #006cff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.impact-point p {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+
+/* ===============================
+   PREMIUM CTA BUTTON ANIMATION
+   =============================== */
+
+.impact-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 14px 34px;
+  background: #006cff;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Sliding overlay */
+.impact-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0056d6;          /* darker blue */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: -1;
+}
+
+/* Hover animation */
+.impact-btn:hover::before {
+  transform: scaleX(1);
+}
+
+/* Keep text above overlay */
+.impact-btn span,
+.impact-btn {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional subtle lift */
+.impact-btn:hover {
+  box-shadow: 0 12px 25px rgba(0, 108, 255, 0.35);
+}
+
+
+
+
+/* RIGHT GRID */
+.impact-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* METRIC CARDS */
+.impact-metric {
+  padding: 26px 22px;
+  border-radius: 16px;
+  background: #f7fbff;
+  border: 1px solid rgba(0,108,255,0.15);
+}
+
+.impact-metric h3 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.impact-metric p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* ICONS – PURE BLUE */
+.metric-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  background-color: #006cff;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+/* ICON SHAPES */
+.clients { mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z'/></svg>"); }
+
+.founded { mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M12 2 2 7v2h20V7L12 2zm-7 9v9h3v-9H5zm6 0v9h3v-9h-3zm6 0v9h3v-9h-3z'/></svg>"); }
+
+.projects { mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M3 5h18v14H3zM1 3v18h22V3z'/></svg>"); }
+
+.global { mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M12 2a10 10 0 100 20 10 10 0 000-20zm7.93 9h-3.05a15.72 15.72 0 00-1.45-5.02A8.03 8.03 0 0119.93 11z'/></svg>"); }
+
+/* REVENUE CARD */
+.impact-revenue {
+  grid-column: span 2;
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #f4f9ff, #eef5ff);
+  border: 1px solid rgba(0,108,255,0.2);
+}
+
+.impact-revenue h3 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.impact-revenue p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+/* GRAPH */
+.revenue-graph {
+  height: 60px;
+  background: linear-gradient(
+    90deg,
+    rgba(0,108,255,0.25),
+    rgba(0,108,255,0.6)
+  );
+  clip-path: polygon(0 100%, 20% 70%, 40% 85%, 60% 40%, 80% 55%, 100% 25%, 100% 100%);
+}
+
+/* ===============================
+   REVENUE GRAPH ANIMATION
+   =============================== */
+
+.revenue-graph {
+  position: relative;
+  overflow: hidden;
+}
+
+.revenue-graph::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: none;
+}
+
+.impact-revenue.animate .revenue-graph::after {
+  animation: growGraphX 1.6s ease forwards;
+}
+
+@keyframes growGraphX {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+
+/* ===============================
+   CARD HOVER – PREMIUM EFFECT
+   =============================== */
+
+.impact-metric,
+.impact-revenue {
+  transition: 
+    transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.impact-metric:hover,
+.impact-revenue:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(0, 108, 255, 0.15);
+  border-color: rgba(0, 108, 255, 0.35);
+  background: #f1f8ff;
+}
+
+
+/* ------------------- SOLUTIONS SECTION ------------------- */
+
+.solutions-pro {
+  padding: 120px;
+  background: #02204a;
+  color: #fff;
+}
+
+.sol-tag {
+  color: #00c8ff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sol-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 60px;
+}
+
+/* LIST WRAPPER */
+.solutions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* CARD */
+.solution-card {
+  display: grid;
+  grid-template-columns: 120px 1fr 80px;
+  align-items: center;
+  padding: 40px 50px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.solution-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ICON */
+.solution-icon {
+  width: 90px;
+  height: 90px;
+  font-size: 45px;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.4s ease;
+}
+
+/* TEXT */
+.solution-content h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.solution-content p {
+  color: #d4e1ff;
+  font-size: 18px;
+}
+
+/* ARROW */
+.solution-arrow span {
+  font-size: 26px;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+/* ----------------- HOVER: BLUE → WHITE TRANSITION ----------------- */
+.solution-card:hover {
+  background: #fff;
+  transform: translateY(-6px);
+  border-color: #007bff;
+}
+
+.solution-card:hover .solution-content h2,
+.solution-card:hover .solution-content p {
+  color: #000;
+}
+
+.solution-card:hover .solution-icon {
+  background: #007bff;
+  color: #fff;
+}
+
+.solution-card:hover .solution-arrow span {
+  background: #007bff;
+  color: #fff;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .solution-card {
+    grid-template-columns: 90px 1fr 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .solution-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+/* ---------------- RIGHT-TO-LEFT HOVER SWIPE EFFECT ---------------- */
+.solution-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,150,255,0.15), rgba(255,255,255,0));
+  transition: left 0.45s ease;
+  pointer-events: none;
+}
+
+.solution-card:hover::before {
+  left: 100%;
+}
+
+
+/* ------------------- CLICK ANIMATION COMBO (BEST) ------------------- */
+
+/* SCALE + SHADOW PULSE */
+.solution-card.clicked {
+  transform: scale(1.04);
+  box-shadow: 0 12px 32px rgba(0,140,255,0.35);
+  transition: 0.25s ease;
+}
+
+/* RIGHT-TO-LEFT SWIPE GLOW */
+.solution-card.clicked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160%;
+  width: 160%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,130,255,0.35), rgba(255,255,255,0));
+  animation: swipeGlow 0.6s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes swipeGlow {
+  0% { left: -160%; }
+  100% { left: 100%; }
+}
+/* ------------------- CLICK GLOW PULSE (OPTION C) ------------------- */
+
+/* ------------------- CLICK UNDERLINE SLIDE (OPTION B) ------------------- */
+.solution-card {
+  position: relative;
+}
+
+.solution-card.clicked::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3.5px;
+  width: 0%;
+  background: #0095ff;
+  animation: underlineSlide 0.35s ease forwards;
+}
+
+@keyframes underlineSlide {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+
+/* ---------------------- SERVICES SECTION (DELOITTE STYLE) ---------------------- */
+
+/* ---------------------- SERVICES SECTION (DELOITTE STYLE) ---------------------- */
+
+.services-pro {
+  padding: 110px 120px;
+  background: #ffffff;
+}
+
+.services-tag {
+  color: #007bff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.services-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  line-height: 1.3;
+  color: #000;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* Card Wrapper */
+.service-card {
+  position: relative;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f5f9ff;
+  border: 1px solid #e1e9f7;
+  transition: 0.35s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  border-color: #007bff;
+}
+
+/* Front Section */
+.service-front {
+  position: absolute;
+  inset: 0;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.45s ease;
+}
+
+.service-card:hover .service-front {
+  transform: translateY(-100%);
+}
+
+.service-icon {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+
+/* Back Slide Section */
+.service-back {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 35px;
+  background: linear-gradient(180deg, #007bff, #005fcc);
+  color: #ffffff;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: bottom 0.45s ease;
+}
+
+.service-card:hover .service-back {
+  bottom: 0;
+}
+/* IMAGE WRAPPER */
+.service-img-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* SMALL ZOOM EFFECT */
+.service-card:hover .service-img {
+  transform: scale(1.07);
+}
+
+/* TRANSPARENT SLIDE-UP OVERLAY */
+.service-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -110px;
+  height: 110px;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  padding: 18px 20px;
+  transition: bottom 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-card:hover .service-overlay {
+  bottom: 0;
+}
+
+/* TEXT STYLE */
+.service-overlay h2 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.service-overlay p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 6px;
+  line-height: 1.3;
+}
+/* SERVICE IMAGE */
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* TITLE BAR — ALWAYS VISIBLE */
+.service-title-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 18px 20px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+  color: #fff;
+}
+
+.service-title-bar h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* TRANSPARENT OVERLAY (hidden initially) */
+.service-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -120px;          /* hidden */
+  height: 120px;
+  padding: 18px 22px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 0 0 20px 20px;
+  transition: bottom 0.35s ease;
+}
+
+/* WHEN CARD IS CLICKED → Show overlay */
+.service-card.active .service-overlay {
+  bottom: 0;
+}
+
+/* Make the entire card clickable */
+.service-card {
+  position: relative;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+/* ---- Card Image ---- */
+.service-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ---- Title Bar ---- */
+.service-title-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 18px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  border-radius: 0 0 16px 16px;
+}
+
+.service-title-bar h3 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* ---- Full Transparent Overlay (Infosys Style) ---- */
+.service-full-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.80);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: slideUp 0.4s ease forwards;
+  z-index: 9999;
+}
+
+/* ---- Slide-Up Content ---- */
+.service-full-content {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(25,25,25,0.88);
+  padding: 40px;
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.service-full-content h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.service-full-content p {
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Disable hover animation when overlay is open */
+.service-card.no-hover {
+  pointer-events: none;
+  transform: none !important;
+  transition: none !important;
+}
+
+.service-card.no-hover .service-img {
+  transform: none !important;
+}
+
+.service-card.no-hover .service-title-bar {
+  background: rgba(0,0,0,0.55);
+}
+
+.service-card.no-hover:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+/* Small inside-card transparent overlay */
+/* SLIDE-UP OVERLAY (INSIDE CARD) */
+.service-slide-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;        /* fully hidden BELOW the card */
+  height: 100%;         /* covers full card height */
+  background: rgba(0,0,0,0.75);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+  color: #fff;
+  text-align: center;
+
+  transition: bottom 0.45s ease;
+}
+
+/* When clicked → overlay slides up from very bottom */
+.service-card.active .service-slide-overlay {
+  bottom: 0;
+}
+
+
+/* ---- Close Button ---- */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ---- Animation ---- */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-title {
+    font-size: 34px;
+  }
+}
+
+
+/* ===============================
+   SERVICES – MOBILE RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+
+  /* Section padding */
+  .services-pro {
+    padding: 60px 20px;
+  }
+
+  /* Section tag */
+  .services-tag {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  /* Section title */
+  .services-title {
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 30px;
+  }
+
+  /* Grid → single column */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  /* Card size */
+  .service-card {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  /* Image */
+  .service-img {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  /* Title bar */
+  .service-title-bar {
+    padding: 14px 16px;
+  }
+
+  .service-title-bar h3 {
+    font-size: 17px;
+  }
+
+  /* Slide overlay (tap-based UX) */
+  .service-slide-overlay {
+    padding: 22px;
+  }
+
+  .service-slide-overlay h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .service-slide-overlay p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Disable hover lift on mobile */
+  .service-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+
+
+/* ===============================
+   IMPACT STORY SECTION
+   =============================== */
+
+.impact-story {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  padding: 100px 120px;
+  background: #ffffff;
+  align-items: center;
+}
+
+/* LEFT */
+.impact-story-left {
+  max-width: 560px;
+}
+
+.story-tag {
+  color: #006cff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.story-title {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #0b0b0b;
+}
+
+.story-title span {
+  display: block;
+  color: #006cff;
+}
+
+.story-desc {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* ===============================
+   ADVANCED ENTERPRISE CTA BUTTON
+   =============================== */
+
+.story-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 14px 36px;
+  background: #006cff;
+  color: #ffffff;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 
+    transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 0.35s ease;
+}
+
+/* Sliding color layer */
+.story-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #0056d6 0%,
+    #004ec2 100%
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+}
+
+/* Button text */
+.story-btn span {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.35s ease;
+}
+
+/* Hover state */
+.story-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.story-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0, 108, 255, 0.35);
+}
+
+/* Arrow micro-move */
+.story-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* Active (click) feedback */
+.story-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 108, 255, 0.25);
+}
+
+/* RIGHT IMAGE */
+/* ===============================
+   CLEAN ENTERPRISE IMAGE
+   =============================== */
+
+.impact-story-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;          /* clean, professional */
+  object-fit: cover;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12); /* subtle depth */
+}
+
+
+/* ===============================
+   COMPACT IMPACT STORY
+   =============================== */
+
+.impact-story--compact {
+  padding: 70px 120px;          /* reduced padding */
+  gap: 60px;
+}
+
+/* TEXT SCALE DOWN */
+.impact-story--compact .story-title {
+  font-size: 36px;
+}
+
+.impact-story--compact .story-desc {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+/* BUTTON SLIGHTLY SMALLER */
+.impact-story--compact .story-btn {
+  padding: 12px 30px;
+  font-size: 15px;
+}
+
+/* IMAGE SLIGHTLY TIGHTER */
+.impact-story--compact .impact-story-right img {
+  border-radius: 18px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* Trigger */
+.dropdown-trigger {
+  padding: 14px 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;          /* ATTACHED to Services */
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #fff;
+  border-radius: 12px;
+  min-width: 220px;
+
+  padding: 10px 0;
+  margin-top: 0;      /* ❌ NO GAP */
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: all 0.25s ease;
+}
+
+/* KEEP MENU OPEN */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Menu items */
+.dropdown-menu li {
+  padding: 14px 20px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  text-decoration: none;
+  color: #0a2540;
+  font-weight: 500;
+}
+
+.dropdown-menu li:hover {
+  background: #f3f8ff;
+}
+
+.hero-demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 16px 38px;
+  border-radius: 999px;
+
+  background: #005eff;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+
+  box-shadow:
+    0 12px 30px rgba(2, 32, 74, 0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.12);
+
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arrow animation */
+.hero-demo-btn span {
+  transition: transform 0.35s ease;
+}
+
+/* Hover */
+.hero-demo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 45px rgba(2, 32, 74, 0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+.hero-demo-btn:hover span {
+  transform: translateX(6px);
+}
+
+/* Click */
+.hero-demo-btn:active {
+  transform: scale(0.96);
+}
+
+/* Soft glow sweep (enterprise touch) */
+.hero-demo-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.hero-demo-btn:hover::after {
+  left: 120%;
+}
+@media (min-width: 1024px) {
+  .hero-demo-btn {
+    font-size: 17px;
+    padding: 18px 44px;
+  }
+}
+
+
+/* ===============================
+   IMPACT SECTION – MOBILE FIX
+   =============================== */
+
+@media (max-width: 768px) {
+
+  .impact-mnc {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 60px 20px;
+  }
+
+  /* LEFT */
+  .impact-left {
+    max-width: 100%;
+  }
+
+  .impact-tag {
+    font-size: 14px;
+  }
+
+  .impact-title {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .impact-desc {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .impact-point p {
+    font-size: 14.5px;
+  }
+
+  /* CTA */
+  .impact-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 24px;
+  }
+
+  /* RIGHT */
+  .impact-right {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .impact-metric {
+    text-align: center;
+    padding: 22px;
+  }
+
+  .impact-metric h3 {
+    font-size: 32px;
+  }
+
+  .metric-icon {
+    margin: 0 auto 10px;
+  }
+
+  /* Revenue Card */
+  .impact-revenue {
+    grid-column: span 1;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .impact-revenue h3 {
+    font-size: 30px;
+  }
+
+  .impact-revenue p {
+    font-size: 14.5px;
+  }
+}
+@media (max-width: 480px) {
+
+  .impact-title {
+    font-size: 26px;
+  }
+
+  .impact-desc {
+    font-size: 15px;
+  }
+
+  .impact-point p {
+    font-size: 14px;
+  }
+
+  .impact-metric h3,
+  .impact-revenue h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .solution-title {
+    font-size: 28px;
+    line-height: 1.25;
+    text-align: center;
+
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-arrow {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+
+  .carousel-window {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track {
+    transform: none !important;
+    gap: 16px;
+    padding: 0 20px;
+  }
+
+  .flex-card {
+    min-width: 85%;
+    height: auto;
+    scroll-snap-align: center;
+    flex-direction: column;
+  }
+
+  .flex-card.active {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    padding: 18px;
+  }
+}
+@media (max-width: 768px) {
+
+  .expanded-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .big-img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .text-side {
+    width: 100%;
+    padding: 0;
+  }
+
+  .solution-arrow-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-card {
+    width: 90vw;
+    height: auto;
+    padding: 16px;
+    transform: none !important;
+  }
+
+  .flex-card.active {
+    width: 90vw;
+    height: auto;
+  }
+
+  .expanded-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-window {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 16px;
+    padding: 20px 16px;
+    transform: none !important;
+  }
+
+  .flex-card {
+    scroll-snap-align: center;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .flex-card.active {
+    width: 85%;
+    height: auto;
+  }
+
+  .expanded-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .normal-img-wrapper {
+    height: 160px;
+  }
+
+  .normal-title {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .solution-title {
+    font-size: 32px;        /* was 52px */
+    line-height: 1.25;
+    margin-left: 20px;
+    margin-right: 20px;
+    word-break: normal;    /* IMPORTANT */
+    white-space: normal;
+  }
+}
+@media (max-width: 768px) {
+  .solution-tag {
+    margin-left: 20px;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+}
+@media (max-width: 768px) {
+  .solutions-flex {
+    padding: 60px 0 40px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-track {
+    padding-top: 10px;
+  }
+
+  .flex-card {
+    min-width: 82%;
+    border-radius: 20px;
+  }
+}
+/* ===============================
+   IMPACT STORY – RESPONSIVE FIX
+   =============================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .impact-story,
+  .impact-story--compact {
+    grid-template-columns: 1fr;
+    padding: 80px 60px;
+    gap: 50px;
+  }
+
+  .impact-story-left {
+    max-width: 100%;
+  }
+
+  .story-title {
+    font-size: 34px;
+  }
+
+  .impact-story-right img {
+    max-height: 420px;
+    object-fit: cover;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .impact-story,
+  .impact-story--compact {
+    grid-template-columns: 1fr;
+    padding: 60px 24px;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .story-tag {
+    font-size: 14px;
+  }
+
+  .story-title {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .story-title span {
+    display: inline;
+  }
+
+  .story-desc {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .story-btn {
+    width: fit-content;
+    padding: 12px 26px;
+    font-size: 15px;
+  }
+
+  .impact-story-right img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 14px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .story-title {
+    font-size: 26px;
+  }
+
+  .story-desc {
+    font-size: 14.5px;
+  }
+
+  .story-btn {
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+}
